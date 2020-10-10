@@ -1,0 +1,190 @@
+.home {
+    background: grey;
+    overflow-y: hidden;
+    height: inherit;
+
+    &__loading {
+        p {
+            margin-top: 4px;
+            color: blue;
+        }
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .search-bar {
+        top: 0;
+        position: fixed;
+        width: 100%;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: blue;
+
+        &__logo {
+            height: 50px;
+            margin-left: 16px;
+        }
+
+        &__search {
+            display: flex;
+            justify-content: space-evenly;
+            border-bottom: 0.5px solid white;
+            margin-right: 16px;
+
+            input {
+                color: white;
+                background: none;
+                border: none;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            &__icon {
+                height: 30px;
+            }
+        }
+    }
+
+    .users {
+        padding: 70px 0 0 0;
+        margin-bottom: 16px;
+        height: 40%;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-y: auto;
+
+        div:first-of-type {
+            background: red;
+        }
+
+        &__empty {
+            color: red;
+            border: 1px solid red;
+            border-radius: 3px;
+            padding: 2px;
+        }
+
+        &__card {
+            background: red;
+            width: 60%;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-radius: 6px;
+            margin-bottom: 2px;
+        }
+    }
+
+    .scan-no-results {
+        @keyframes fadein {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        color: red;
+        text-align: center;
+        border: 1px solid red;
+
+        -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+        -moz-animation: fadein 1s; /* Firefox < 16 */
+        -ms-animation: fadein 1s; /* Internet Explorer */
+        -o-animation: fadein 1s; /* Opera < 12.1 */
+        animation: fadein 1s;
+    }
+
+    .scan-box {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        color: red;
+        text-align: center;
+
+        video {
+            border: 2px solid blue;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            max-width: 400px;
+        }
+    }
+
+    .scan-button-container {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            p {
+                margin: 0 16px 0 0;
+            }
+        }
+    }
+
+    .pui-dialog {
+        background-color: grey;
+    }
+
+    .slack-flyout {
+        &__header {
+            border-bottom: 3px solid blue !important;
+        }
+
+        &__body {
+            height: calc(100% - 100px);
+        }
+
+        &__body-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+            margin-top: 8px;
+        }
+
+        &__options {
+            width: 100%;
+            text-align: center;
+            color: grey;
+        }
+
+        &__checkboxes {
+            display: flex;
+            width: 100%;
+            justify-content: space-evenly;
+        }
+
+        &__comments {
+            margin-top: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            textarea {
+                max-width: 90%;
+                height: 250px;
+                max-height: 275px;
+            }
+        }
+    }
+}

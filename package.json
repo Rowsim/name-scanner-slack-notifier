@@ -1,0 +1,65 @@
+{
+  "name": "image-scanner-slack-notifier",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/jest": "^24.0.0",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0",
+    "@types/react-router-dom": "^4.3.4",
+    "fuse.js": "^5.0.1-beta",
+    "local-storage": "^2.0.0",
+    "node-sass": "^4.13.1",
+    "pivotal-ui": "^19.2.3",
+    "raw-loader": "^3.1.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-router-dom": "latest",
+    "react-scripts": "3.3.1",
+    "react-spinners": "^0.8.1",
+    "react-webcam": "^5.0.0",
+    "typescript": "~3.7.2"
+  },
+  "scripts": {
+    "build": "sauron build-tools build && bundlesize",
+    "start": "sauron build-tools start",
+    "compile": "sauron build-tools compile --devMode",
+    "test": "sauron build-tools test",
+    "lint": "sauron build-tools lint",
+    "verify": "yarn lint && CI=true yarn test"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "bundlesize": [
+    {
+      "path": "./build/**/main.*.js",
+      "maxSize": "40 kB"
+    },
+    {
+      "path": "./build/**/*.chunk.js",
+      "maxSize": "350 kB"
+    }
+  ],
+  "devDependencies": {
+    "@types/react": "^16.9.23",
+    "bundlesize": "^0.18.0",
+    "webpack-cli": "^3.3.11"
+  }
+}
